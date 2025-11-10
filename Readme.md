@@ -69,4 +69,16 @@ This project uses a 1.8" TFT LCD display with SPI protocol for displaying the Su
 # Software Design
 For this project, I am using PlatformIO as the development environment.
 # Results
+   - Functional TFT interface: 9x9 Sudoku grid rendered clearly with smooth visual updates and responsive redraws.
+   - Reliable keypad input: 4x4 keypad handles navigation and numeric entry with low latency and implemented debounce for stable input.
+   - Real-time rule validation: every move checked against row/column/3x3 constraints; invalid moves rejected and user alerted.
+   - Stable runtime on Arduino Uno: continuous operation during multi-hour tests without crashes; CPU and memory usage within safe margins.
+   - Backlight and power handling: PWM backlight control works and brightness is adjustable; voltage levels respected for the TFT.
+   - Basic UX features: clear messages for errors, success screen on completion, and restart option without hardware reset.
+# Functionality video   
+   [![Watch demo](https://img.youtube.com/vi/UXgrW7sHgAw/hqdefault.jpg)](https://youtu.be/UXgrW7sHgAw)
 # Conclusions
+   - Hardware–software integration proved successful: Arduino + SPI TFT + 4x4 keypad work together reliably.
+   - Architecture (input → validate → render) is lightweight and fits Arduino Uno constraints.
+   - Real‑time rule checking and immediate visual feedback make gameplay intuitive and reduce invalid moves.
+   - Stable during extended tests; debounce and PWM backlight improved reliability.
